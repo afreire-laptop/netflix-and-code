@@ -1,4 +1,4 @@
-# Netflix and Code
+# Welcome
 [netflix-and-code.netlify.com](https://netflix-and-code.netlify.com/)
 
 ## Requirements
