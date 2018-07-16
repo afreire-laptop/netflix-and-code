@@ -19,6 +19,7 @@ In order to setup, run and start the app locally you just have to:
   - laravel-mix for asset management (let me know if you're okay with that)
   - I've also set an Express server that listens on port 3000
   - Sass for better structured CSS
+  - Puppeteer for Automation and Scrapping
 
 ## TODOS
 
