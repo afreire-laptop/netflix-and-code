@@ -1,0 +1,111 @@
+.modal {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  background-color: $primary-color;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: 4;
+  bottom: -200vh;
+  transition: bottom 600ms cubic-bezier(1, 0, 0, 1);
+}
+
+.modal.is-visible {
+  bottom: 0px;
+}
+
+.modal__header {
+  position: relative;
+  width: 100%;
+  height: 55px;
+  background-color: $primary-color;
+  border-bottom: 1px solid $divider-color;
+}
+
+.modal__title {
+  color: $secundary-color;
+  opacity: 0;
+
+  font-size: 2rem;
+  line-height: 2.2rem;
+  font-family: $font-stack;
+  color: $secundary-color;
+  font-weight: 900;
+  text-transform: uppercase; //equal to header title
+  transition: opacity 0.3s ease-in-out;
+
+  &.is-visible {
+    opacity: 1;
+  }
+}
+
+.modal__header .btn-close-modal {
+  margin-top: 10px;
+  
+  svg {
+    fill: $grey-color;
+  }
+
+  &:focus {
+    outline: none;
+    
+    svg {
+      fill: $accent-color;
+    }
+  }
+}
+
+.off-canvas {
+  position: fixed; 
+  width: 100%;
+  display: block;
+  height: 100vh;
+  top: 0px;
+  left: -450px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(34,31,31,0.8);
+  z-index: 3;
+  display: none;
+  opacity: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  .modal {
+    width: 450px;
+    bottom: 0px;
+    right: -100%;
+    box-shadow: 0 1px 5px rgba(0,0,0,.1), 0 2px 2px rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.12);
+    transition: right 600ms cubic-bezier(1, 0, 0, 1);
+  }
+
+  .modal.is-visible {
+    right: 0px;
+  }
+
+  .modal__header {
+    height: 70px;
+  }
+
+  .btn-close-modal svg {
+    transition: all 0.3s ease-in-out;
+    
+    &:hover {
+      fill: $accent-color;
+    }
+  }
+
+  .off-canvas {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &.is-visible {
+      display: block;
+    }
+
+    &.is-opaque {
+      opacity: 1;
+    }
+  }
+}

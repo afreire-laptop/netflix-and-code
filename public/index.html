@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+    <title>Netflix and Code</title>
+    <meta name="author" content="Netflix and Code">
+    <meta name="description" content="Find the hidden categories on Netflix">
+    <link rel="icon" type="image/png" sizes="50x50" href="favicon.png">
+    <!--[if IE]>
+      <link rel="shortcut icon" href="favicon.ico">
+    <![endif]-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/app.css">
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#222">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Netflix and Code">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="msapplication-TileColor" content="#222">
+    <meta name="msapplication-TileImage" content="favicon.png">
+  </head>
+  <body>
+    <div id="js-app">
+      <header class="main-header" id="js-main-header">
+        <div class="main-header__container">
+          <div class="is-row">
+            <a href="/">
+              <h1 class="main-title">Netflix &amp; code</h1>
+            </a>
+            <a class="btn js-btn-toggle-modal" href="#" id="js-btn-filters">
+              Filter by
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <main class="main-content" role="main" id="js-main-content">
+        <div class="page" id="js-main-page">
+          <section class="block block--search search-input-wrapper">
+            <div class="container">
+              <div class="search-wrapper">
+                <!-- Search input -->
+                <input type="text" class="search-input" placeholder="Search by genre or category..." id="js-search">
+              </div>
+            </div>
+          </section>
+          <section class="block block--search-list">
+            <div class="container" id="js-list-container">
+              <!-- Main Search List goes here -->
+              <ul class="search__genre-list" id="js-search__genre-list"></ul>
+            </div>
+          </section>
+        </div>
+      </main>
+      
+      <!-- Search BTN CTA -->
+      <a class="btn-search" href="#" id="js-btn-search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+        </svg>
+      </a><!-- ./Search BTN CTA -->
+
+      <!-- modal menu -->
+      <aside class="modal" id="js-modal">
+        <header class="modal__header">
+          <div class="content">
+            <div class="container is-row">
+              <h2 class="modal__title" id="js-modal__title">Genres</h2>
+              <a class="btn-close-modal js-btn-toggle-modal" href="#" id="js-btn-close-modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"/>
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </header>
+        <!-- navigation filters -->
+        <nav class="block block--search-filters" id="js-block-search-filters">
+          <div class="container">
+            <ul class="search-filters-list" id="js-search-filters-list"></ul>
+          </div>
+        </nav>
+        <span class="off-canvas js-btn-toggle-modal" id="js-off-canvas"></span>
+      </aside><!-- ./modal menu -->
+
+      <footer class="main-footer" id="js-main-footer">
+        <section class="block block--footer">
+          <div class="container">
+            <p class="copyright">
+              <small>2018 &copy; Netflix and Code - All rights reserved</small>
+            </p>
+          </div>
+        </section>
+      </footer>
+    </div>
+    <script async src="/scripts/app.js"></script>
+  </body>
+</html>

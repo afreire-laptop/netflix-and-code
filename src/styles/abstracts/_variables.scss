@@ -1,0 +1,50 @@
+//fonts
+$font-stack: 'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+//colors
+$primary-color: rgba(34,31,31,1);
+$secundary-color: rgba(245,245,241,1);
+$accent-color: rgba(229,9,20,1);
+$accent-color-dark: rgba(178,7,16,1);
+$grey-color: rgba(245,245,241,.4);
+$text-color: rgba(245,245,241,.6);
+
+$divider-color: rgba(245,245,241,.15);
+
+$border-radius: 3px;
+
+@mixin title-styles() {
+  font-size: 3rem;
+  line-height: 3.6rem;
+  font-family: $font-stack;
+  color: $secundary-color;
+  font-weight: 900;
+}
+
+@mixin subtitle-styles() {
+  font-size: 2.5rem;
+  line-height: 2.7rem;
+  font-family: $font-stack;
+  color: $secundary-color;
+}
+
+@mixin body-head-styles() {
+  font-size: 2rem;
+  line-height: 2.2rem;
+  font-family: $font-stack;
+  color: $secundary-color;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+@mixin body-small-styles() {
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+  font-family: $font-stack;
+}
+
+@mixin link-styles() {
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  font-family: $font-stack;
+}

@@ -1,0 +1,13 @@
+.block--footer {
+  padding-bottom: 25px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  background-color: $primary-color;
+}
+
+.copyright {
+  color: $secundary-color;
+
+  @include body-small-styles();
+}

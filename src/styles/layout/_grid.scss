@@ -1,0 +1,21 @@
+.grid {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.grid__cell {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+
+@media only screen and (min-width: 640px) {
+  .grid {
+    flex-flow: row wrap;
+  }
+
+  .grid__cell {
+    width: calc(100% / 3 - 25px);
+    margin-right: 25px;
+  }
+}

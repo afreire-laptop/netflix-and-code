@@ -1,0 +1,43 @@
+.block--search-filters {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.block--search-filters.is-visible {
+  opacity: 1;
+}
+
+.search-filters-list__link {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 15px 0px;
+
+  @include title-styles();
+
+  text-align: left;
+  color: $text-color;
+  
+  &:first-letter {
+    text-transform: uppercase;
+  }
+
+  &.is-selected {
+    color: $accent-color;
+  }
+
+  &:focus {
+    outline: none;
+    color: $accent-color;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .search-filters-list__link {
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}
