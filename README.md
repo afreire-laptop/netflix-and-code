@@ -29,9 +29,6 @@ In order to setup, run and start the app locally you just have to:
   - Add Polyfills to support the Promise & Fetch object.
   - Force HTTPS and Implement Service worker and PWA.
 
-I consider time a very important part of a project - I spent a total of 16 hours. It has only been tested in Chrome and Firefox. With more time I would invest it dealing with the filters functionality, support for all browsers (Promise and Fetch) and UI animations, 
-either way I really tried to give it my best :)
-
 ## Structure
 
 ```
